@@ -1,0 +1,151 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="author" content="iLimoPhP">
+  <meta name="keyword" content="minecraft">
+  <meta name="description" content="iLimoPhp WEB">
+  <title>iLimoPhP - Portal Website</title>
+	<link rel="stylesheet" type="text/css" href="etc//style.css">
+	        <link rel="stylesheet" href="etc/ipblock.css">
+</head>
+
+<style>
+
+body, html {
+
+
+  /* The image used */
+  background-image: url("form-bg1.png");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+ </style>
+ 
+<body>
+ 
+ <div id="the-logo">
+
+					<a href="">
+
+					    <img src="logo1.png" height="450px" alt="">
+
+					</a>
+
+				</div>
+  			<div id="header-bottom">
+
+
+                <script>
+                MinecraftAPI.getServerStatus('test', {
+                    port: 25565
+                  }, function (err, status) {
+                    if(status.online == false){
+                        return document.querySelector('#serverdata').innerHTML = 'Server offline!';
+                    }
+                    if (err) {
+                      return document.querySelector('#serverdata').innerHTML = 'Server offline!';
+                    }else{
+                document.querySelector('.player_count').innerHTML = '<span class="player_count">'
+                    + status.players.now + '</span>';
+                  }
+                });
+                </script>
+
+                <ul>
+                    <li class="playercounter">
+                        <a id="serverdata">There are <font size="3" color="#e38809"><b><span class="player_count"></span></b></font> who play on this server: <font size="3" color="#e38809"><b><span id="ClickToCopy" data-clipboard-text="YOUR-IP-HERE" title="Click to copy">test.ilimophp.com</span></b></font></a>
+                    </li>
+                </ul>
+
+            <script>
+                $('#ClickToCopy').click(function() {
+                $(this).queue(function() {
+                $(this).html('<span> IP Copied </span>').delay(2000).dequeue();
+                })
+                $(this).queue(function() {
+                $(this).html('<span>YOUR-IP-HERE</span>').dequeue();
+                })
+                });
+            </script>                
+            <br>
+            <br>
+				<nav>
+
+			<ul>
+
+				<li>
+
+					<a href="https://cursednetworkoficial.tebex.io/login">
+						<span data-hover="Store">Auth</span>
+
+						<img src="auth.png" alt="forums1">
+
+						<img src="auth.png" alt="forums2">
+
+
+					</a>
+
+				</li>
+
+				<li>
+
+					<a href="https://cursednetworkoficial.tebex.io/category/1809867">
+						<span data-hover="Store">Shop</span>
+
+						<img src="shop.png" alt="Store1">
+
+						<img src="shop.png" alt="Store2">
+
+
+					</a>
+
+				</li>
+
+				<li>
+
+					<a href="https://cursednetworkoficial.tebex.io/">
+						<span data-hover="Store">Banlist</span>
+
+						<img src="banlist.png" alt="Bans1">
+
+						<img src="banlist.png" alt="Bans2">
+
+
+					</a>
+
+				</li>
+				<li>
+
+					<a href="https://cursednetworkoficial.tebex.io/">
+						<span data-hover="Store">Forum</span>
+
+						<img src="forum.png" alt="Vote1">
+
+						<img src="forum.png" alt="Vote2">
+
+
+					</a>
+
+				</li>				
+
+			</ul>
+
+		</nav>
+
+			</div>
+	<script src="etc/js/jquery.min.js"></script>
+	<script src="etc/bootstrap/js/bootstrap.min.js"></script>
+	<script src="etc/js/my-login.js"></script>
+</body>
+</html>
